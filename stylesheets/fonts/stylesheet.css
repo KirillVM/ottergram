@@ -1,0 +1,12 @@
+@font-face {
+    font-family: 'Vogue Paris';
+    src: url('VogueParis.eot');
+    src: local('Vogue Paris Regular'), local('VogueParis'),
+        url('VogueParis.eot?#iefix') format('embedded-opentype'),
+        url('VogueParis.woff2') format('woff2'),
+        url('VogueParis.woff') format('woff'),
+        url('VogueParis.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+

@@ -1,23 +1,58 @@
+@font-face {
+    font-family: 'Vogue Paris';
+    src: url('fonts/VogueParis.eot');
+    src: local('Vogue Paris Regular'), local('VogueParis'),
+        url('fonts/VogueParis.eot?#iefix') format('embedded-opentype'),
+        url('VogueParis.woff2') format('woff2'),
+        url('fonts/VogueParis.woff') format('woff'),
+        url('fonts/VogueParis.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
 body {
     font-size: 10px;
-    background:rgb(149, 194, 215);
+    background:#798C07;
 }
 
 a {
     text-decoration: none;
 }
 
-thumbnail-item{
+.logo-text{
+    background-color: white;
+
+
+    text-align: center;
+    font-family: Vogue Paris;
+    text-transform: uppercase;
+    font-size: 37px;
+}
+
+
+.thumbnail-list{
+    list-style: none;
+    padding: 0px;
+}
+
+.thumbnail-item{
+    display: block;
     border: 1px solid rgb(100%, 100%, 100%);
     border: 1px solid rgba(100%, 100%, 100%, 0.8);
 }
+
+.thumbnail-item + .thumbnail-item{
+    margin-top: 50px;
+}
+
 .thumbnail-image{
     display: block;
     width: 100%;
-    height: 90%;
+    height: 87%;
 }
+
 .thumbnail-title {
-    background: rgb(96, 125, 139);
+    background: #397F08;
     color: rgb(202, 238, 255);
 
     display:block;
