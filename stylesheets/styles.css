@@ -1,22 +1,42 @@
 @font-face {
+    font-family: 'Airstream ITC';
+    src: local('Airstream ITC Regular'), local('Airstream-ITC-Regular'),
+        url('fonts/Airstream/AirstreamITCTT.woff2') format('woff2'),
+        url('fonts/Airstream/AirstreamITCTT.woff') format('woff'),
+        url('fonts/Airstream/AirstreamITCTT.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+  }
+
+@font-face {
     font-family: 'Vogue Paris';
     src: url('fonts/VogueParis.eot');
     src: local('Vogue Paris Regular'), local('VogueParis'),
-        url('fonts/VogueParis.eot?#iefix') format('embedded-opentype'),
-        url('VogueParis.woff2') format('woff2'),
-        url('fonts/VogueParis.woff') format('woff'),
-        url('fonts/VogueParis.ttf') format('truetype');
+        url('fonts/VogueParis/VogueParis.eot?#iefix') format('embedded-opentype'),
+        url('fonts/VogueParis/VogueParis.woff2') format('woff2'),
+        url('fonts/VogueParis/VogueParis.woff') format('woff'),
+        url('fonts/VogueParis/VogueParis.ttf') format('truetype');
     font-weight: normal;
     font-style: normal;
 }
 
+html, body{
+    height: 100%;
+}
+
 body {
+    display: flex;
+    flex-direction: column;
     font-size: 10px;
     background:#798C07;
 }
 
 a {
     text-decoration: none;
+}
+
+.main-header{
+    flex: 01 auto;
 }
 
 .logo-text{
@@ -29,26 +49,37 @@ a {
     font-size: 37px;
 }
 
+.main-content{
+    flex: 11 auto;
+    display: flex;
+    flex-direction: column;
+}
 
 .thumbnail-list{
+    flex: 01 auto;
+    order: 2;
+    display: flex;
+    justify-content: space-between;
     list-style: none;
     padding: 0px;
+
+    white-space: nowrap;
+    overflow-x: auto;
+    overflow-y: hidden;
 }
 
 .thumbnail-item{
-    display: block;
+    display: inline-block;
+    max-width: 120px;
+    max-height: 120px;
     border: 1px solid rgb(100%, 100%, 100%);
     border: 1px solid rgba(100%, 100%, 100%, 0.8);
 }
 
-.thumbnail-item + .thumbnail-item{
-    margin-top: 50px;
-}
-
 .thumbnail-image{
     display: block;
-    width: 100%;
-    height: 87%;
+    width: 120px;
+    height: 100px;
 }
 
 .thumbnail-title {
@@ -60,4 +91,33 @@ a {
     padding: 4px 10px;
 
     font-size: 18px;
+}
+
+.detail-image-container{
+    flex: 11 auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.detail-image-frame{
+    position: relative;
+    text-align: center;
+}
+
+.detail-image{
+    width: 90%;
+    height: 250px;
+}
+
+.detail-image-title{
+    position: absolute;
+    bottom: -16px;
+    left: 4px;
+
+    font-family: 'Airstream ITC';
+    color: white;
+    text-shadow: rgba(0,0,0,0.9) 1px 2px 9px;
+    font-size: 40px;
+    
 }

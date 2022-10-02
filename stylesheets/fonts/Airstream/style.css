@@ -1,0 +1,9 @@
+@font-face {
+    font-family: 'Airstream ITC';
+    src: local('Airstream ITC Regular'), local('Airstream-ITC-Regular'),
+        url('AirstreamITCTT.woff2') format('woff2'),
+        url('AirstreamITCTT.woff') format('woff'),
+        url('AirstreamITCTT.ttf') format('truetype');
+    font-weight: 400;
+    font-style: normal;
+  }
