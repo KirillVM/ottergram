@@ -35,10 +35,6 @@ a {
     text-decoration: none;
 }
 
-.main-header{
-    flex: 01 auto;
-}
-
 .logo-text{
     background-color: white;
 
@@ -47,12 +43,6 @@ a {
     font-family: Vogue Paris;
     text-transform: uppercase;
     font-size: 37px;
-}
-
-.main-content{
-    flex: 11 auto;
-    display: flex;
-    flex-direction: column;
 }
 
 .thumbnail-list{
@@ -122,26 +112,52 @@ a {
     
 }
 
-@media all and (orientation:portrait){
-    .main-content{
-        flex-direction: row;
-        overflow: hidden;
-    }
 
-    .thumbnail-list{
-        flex-direction: column;
-        order:0;
-    }
+.HolyGrail {
+    display: flex;
+    min-height: 100vh;
+    flex-direction: column;
+  }
+  
+  .HolyGrail-body {
+    display: flex;
+    flex: 1;
+  }
 
-    .thumbnail-item{
-        max-width: 260px;
-    }
+  .HolyGrail-content {
+    flex: 1;
+  }
+  
+  .HolyGrail-nav, .HolyGrail-ads {
+    /* 12em is the width of the columns */
+    flex: 0 0 12em;
+  }
+  
+  .HolyGrail-nav {
+    /* put the nav on the left */
+    order: -1;
+  }
 
-    .thumbnail-item + .thumbnail-item{
-        margin-top: 20px;
-    }
+  .HolyGrail,
+.HolyGrail-body {
+  display: flex;
+  flex-direction: column;
+}
 
-    .thumbnail-image{
-        width: 100%;
-    }
+.HolyGrail-nav {
+  order: -1;
+}
+
+@media all and (orientation:portrait) {
+  .HolyGrail-body {
+    flex-direction: row;
+    flex: 1;
+  }
+  .HolyGrail-content {
+    flex: 1;
+  }
+  .HolyGrail-nav, .HolyGrail-ads {
+    /* 12em is the width of the columns */
+    flex: 0 0 12em;
+  }
 }
