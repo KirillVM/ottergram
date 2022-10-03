@@ -161,3 +161,26 @@ a {
     flex: 0 0 12em;
   }
 }
+@media all and (orientation:portrait){
+    .main-content{
+        flex-direction: row;
+        overflow: hidden;
+    }
+
+    .thumbnail-list{
+        flex-direction: column;
+        order:0;
+    }
+
+    .thumbnail-item{
+        max-width: 260px;
+    }
+
+    .thumbnail-item + .thumbnail-item{
+        margin-top: 20px;
+    }
+
+    .thumbnail-image{
+        width: 100%;
+    }
+}
