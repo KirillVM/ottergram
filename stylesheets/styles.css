@@ -61,7 +61,7 @@ a {
     display: flex;
     justify-content: space-between;
     list-style: none;
-    padding: 0px;
+    padding: 20px 0px;
 
     white-space: nowrap;
     overflow-x: auto;
@@ -74,6 +74,11 @@ a {
     max-height: 130px;
     border: 1px solid rgb(100%, 100%, 100%);
     border: 1px solid rgba(100%, 100%, 100%, 0.8);
+    transition: transform 133ms ease-in-out;
+}
+
+.thumbnail-item:hover{
+    transform: scale(1.2);
 }
 
 .thumbnail-image{
@@ -103,11 +108,18 @@ a {
 .detail-image-frame{
     position: relative;
     text-align: center;
+
+    transition: transform 350ms cubic-bezier(.53,.54,.18,.47);
+}
+
+.is-tiny{
+    transform: scale(0.001);
+    transition: transform 0ms;
 }
 
 .detail-image{
     width: 90%;
-    height: 250px;
+    height: 70%;
 }
 
 .detail-image-title{
@@ -122,6 +134,28 @@ a {
     
 }
 
+.hidden-detail .detail-image-container{
+    display: none;
+}
+
+.hidden-detail .thumbnail-list{
+    flex-direction: column;
+    align-items: center;
+}
+
+.hidden-detail .thumbnail-item{
+    max-width: 700px;
+    max-height: 700px;
+    min-width: 500px;
+    min-height: 500px;
+}
+
+.hidden-detail .thumbnail-image{
+    max-width: 700px;
+    max-height: 700px;
+    min-width: 500px;
+    min-height: 500px;
+}
 @media all and (max-width:1200px){
     .main-content{
         flex-direction: row;
@@ -131,6 +165,7 @@ a {
     .thumbnail-list{
         flex-direction: column;
         order:0;
+        padding: 0 35px;
     }
 
     .thumbnail-item{
